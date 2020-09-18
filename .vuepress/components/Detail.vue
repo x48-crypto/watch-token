@@ -111,9 +111,10 @@
         if (address) {
           this.token.address = address;
           this.initContract(this.token.address);
-
-          this.token.name = await this.promisify(this.instances.token.name);
-          this.token.symbol = await this.promisify(this.instances.token.symbol);
+          const originalTokenName = await this.promisify(this.instances.token.name);
+          const originalTokenSymbol = await this.promisify(this.instances.token.symbol);
+          this.token.name = this.getParam('name') ? decodeURIComponent(this.getParam('name')) : originalTokenName;
+          this.token.symbol = this.getParam('symbol') ? decodeURIComponent(this.getParam('symbol')) : originalSymbol;
           this.token.decimals = (await this.promisify(this.instances.token.decimals)).valueOf();
           this.token.logo = this.getParam('logo') ? decodeURIComponent(this.getParam('logo')) : '';
 
