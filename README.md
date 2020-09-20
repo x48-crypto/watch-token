@@ -2,7 +2,7 @@
 component: Home
 ---
 
-# WatchToken
+# Yearn Tokens
 
 A simple DApp that allows suggesting and adding a token to users of compatible wallets like MetaMask.
 

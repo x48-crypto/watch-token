@@ -1,15 +1,15 @@
 export default {
-  data () {
+  data() {
     return {
       embedded: false,
-      fallbackAddress: '0x0000000000000000000000000000000000000001',
+      fallbackAddress: "0x0000000000000000000000000000000000000001",
     };
   },
-  mounted () {
-    this.embedded = this.getParam('embedded') || false;
+  mounted() {
+    this.embedded = this.getParam("embedded") || false;
   },
   methods: {
-    promisify (fn, ...args) {
+    promisify(fn, ...args) {
       args.push({ from: this.fallbackAddress });
 
       return new Promise((resolve, reject) => {
@@ -22,12 +22,13 @@ export default {
         });
       });
     },
-    getParam (param) {
+    getParam(param) {
       const vars = {};
-      window.location.href.replace(location.hash, '').replace(
+      window.location.href.replace(location.hash, "").replace(
         /[?&]+([^=&]+)=?([^&]*)?/gi, // regexp
-        function (m, key, value) { // callback
-          vars[key] = value !== undefined ? value : '';
+        function(m, key, value) {
+          // callback
+          vars[key] = value !== undefined ? value : "";
         }
       );
 

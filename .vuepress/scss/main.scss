@@ -1,5 +1,118 @@
-@import "~bootstrap/dist/css/bootstrap";
-@import "~bootstrap-vue/dist/bootstrap-vue";
+body {
+  background: none transparent;
+  min-height: 80vh;
+  font-family: helvetica;
+}
 
-@import "layout";
-@import "elements";
+.page-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  position: absolute;
+}
+
+.vault {
+}
+
+.vault-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.vault-image {
+  height: 70px;
+}
+
+.row {
+  padding: 15px 0px;
+}
+
+.large-button {
+  background-color: #2f80ed;
+  color: #fff;
+  font-size: 32px;
+  padding: 14px 90px;
+  margin-left: 18px;
+  margin-top: 81px;
+  position: relative;
+  border: 0px;
+  border-radius: 12px;
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.wrapper {
+}
+
+.info {
+  top: 70px;
+  left: 0px;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.header {
+  text-align: center;
+  font-size: 32px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.description {
+  text-align: center;
+  font-size: 23px;
+  margin-bottom: 5px;
+}
+
+.learn-wrap {
+  text-align: center;
+  margin-top: 5px;
+}
+
+.learn {
+  color: #0062c7;
+  font-size: 20px;
+  text-decoration: underline;
+}
+
+a {
+  color: #000;
+  text-decoration: none;
+  &:hover {
+    color: #0062c7;
+    text-decoration: underline;
+  }
+}
+
+.small-button {
+  background-color: #2f80ed;
+  color: #fff;
+  font-size: 23px;
+  padding: 15px 31px;
+  border: 0px;
+  border-radius: 12px;
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.vault-name {
+  margin-left: 20px;
+  margin-right: 53px;
+  font-size: 54px;
+  top: 3px;
+  position: relative;
+  font-weight: 100;
+  display: inline;
+}

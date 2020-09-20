@@ -1,8 +1,8 @@
 {
-  "title": "WatchToken",
-  "name": "watch-token",
+  "title": "yUSD",
+  "name": "yUSD",
   "version": "1.0.0",
-  "description": "A simple DApp that allows suggesting and adding a token to users of compatible wallets like MetaMask.",
+  "description": "Add Yearn vault tokens to Metamask",
   "scripts": {
     "lint:vue": "eslint .vuepress --ext .vue,.js",
     "lint:vue:fix": "eslint .vuepress --ext .vue,.js --fix",
@@ -23,7 +23,9 @@
     "url": "https://github.com/vittominacori/watch-token.git"
   },
   "dependencies": {
-    "web3": "0.20.6"
+    "isomorphic-fetch": "^2.2.1",
+    "lodash": "^4.17.20",
+    "node-fetch": "^2.6.1"
   },
   "devDependencies": {
     "@saeris/vue-spinners": "^1.0.8",
